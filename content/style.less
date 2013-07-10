@@ -1,0 +1,89 @@
+@dark-back: rgb(36, 36, 36);
+@light-back: rgb(180, 180, 180);
+@text-color: rgb(207, 207, 207);
+@bk-color: rgb(19, 19, 19);
+@pie-loc: url(/content/PIE.htc);
+
+.bordererd-no-pi {
+	border-radius: 5px;
+	webkit-border-radius: 5px;
+	-moz-border-radius: 5px;
+	box-shadow: 3px 3px 4px #000;
+	-moz-box-shadow: 3px 3px 4px #000;
+	-webkit-box-shadow: 3px 3px 4px #000;
+}
+
+.bordererd {
+	.bordererd-no-pi;
+	behavior: @pie-loc
+}
+
+body {
+	background-color: @bk-color;
+	background-image: url(background.png);
+	color: @text-color;
+}
+
+.myMenu {
+	.bordererd;
+	background-color: @dark-back;
+	padding-top: 10px;
+	padding-bottom: 2px;
+	margin-bottom: 15px;
+}
+
+.myContent {
+	.bordererd;
+	background-color: @dark-back;
+	padding: 10px;
+}
+
+#content {
+	margin-top: 15px;
+}
+
+a {
+	color: white;
+}
+
+a:hover {
+	color: @text-color;
+}
+
+.menu-header {
+	background-color: @bk-color;
+	padding: 5px;
+	font-size: 1.2em;
+	margin-bottom: 3px;
+	padding-left: 10px;
+}
+
+pre {
+	background-color: @light-back;
+}
+
+blockquote {
+	border-left-color: @light-back;
+}
+
+#main {
+	margin-left: 10px;
+	margin-right: 10px;
+}
+
+.mBox {
+	.bordererd-no-pi;
+	background-color: @dark-back;
+	padding: 10px;
+	border: solid rgb(48, 48, 48) 1px;
+	margin-bottom: 20px;
+	height: 132px;
+}
+
+.mBox:hover {
+	border: solid @text-color 1px;
+}
+
+.dirty-state {
+	border-color: red !important;
+}
