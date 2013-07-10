@@ -3,3 +3,13 @@ layout: default
 ---
 
 this is a blank page
+
+<div id="posts">
+  <h2>Blog Posts</h2>
+  <ul>
+    {% for post in site.posts %}
+      <li><span class="date">{{ post.date | date_to_string }}</span>
+          <a href="{{ post.url }}">{{ post.title }}</a></li>
+    {% endfor %}
+  </ul>
+</div>
