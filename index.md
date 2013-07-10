@@ -1,5 +1,6 @@
 ---
 layout: default
+title: Home
 ---
 
 this is a blank page
