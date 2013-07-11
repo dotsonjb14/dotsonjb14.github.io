@@ -1,5 +1,11 @@
 import os
 import sys
+import subprocess
+
+def run(command):
+	s = subprocess.Popen(command, \
+		stderr=subprocess.STDOUT, stdout=subprocess.PIPE, shell=True).communicate()[0]
+	return s
 
 action = "f"
 build_less = "lessc content/style.less content/style.css"
@@ -10,12 +16,12 @@ if(len(sys.argv) > 1):
 	action = sys.argv[1]
 
 if(action == "f"):
-	print "Full Build"
+	print "Running Full Build"
 	print "Running Less"
-	os.system(build_less)
+	run(build_less)
 	print "Less Complete"
 	print "building Site"
-	os.system(build_jekyll)
+	run(build_jekyll)
 	print "Complete"
 elif(action == "r"):
 	os.system(serve_jekyll)
